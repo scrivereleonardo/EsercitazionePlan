@@ -8,7 +8,7 @@ public class BackEndDev extends Employee{
 		
 	}
 	
-	public BackEndDev(String name, String lastName, int id, int workedHours, TimeBank tBank) {
+	public BackEndDev(String name, String lastName, int id, TimeBank tBank) {
 		super(name, lastName, id, tBank);
 	
 	
@@ -16,7 +16,8 @@ public class BackEndDev extends Employee{
 	}
 	
 	public double totalSalary() {
-		double totalSal = this.gettBank().getBaseSalary()+((this.gettBank().getPromotions())*moneyForPromotion)+((this.gettBank().getOverTimeHours())*(this.gettBank().getBaseSalary()/(30*workedHours)*1.7));
+		double totalSal = this.gettBank().getBaseSalary() + ((this.gettBank().getPromotions()) * moneyForPromotion)
+				+ ((this.gettBank().getOverTimeHours()) * (this.gettBank().getBaseSalary() / (30 * workedHours) * 1.7));
 		return totalSal;
 
 	}

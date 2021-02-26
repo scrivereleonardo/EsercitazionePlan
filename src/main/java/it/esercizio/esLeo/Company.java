@@ -11,17 +11,23 @@ import it.esercizio.esLeo.Employee;
 public class Company {
 	List<Employee> employees;
 	Map<Employee, TimeBank> empTotalSalary;
-	
+
 	public Company(List<Employee> employees, Map<Employee, TimeBank> empTotalSalary) {
 		super();
 		this.employees = new ArrayList<>();
 		this.empTotalSalary = new HashMap<>();
 	}
-	
+
 	public void addEmployee(Employee employee) {
 		this.employees.add(employee);
 		this.empTotalSalary.put(employee, new TimeBank());
 	}
-	
-	
+
+	public List<Employee> getEmployees() {
+		return employees;
+	}
+
+
+
+
 }
