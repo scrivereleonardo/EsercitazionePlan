@@ -2,16 +2,16 @@ package it.esercizio.esLeo;
 
 import javax.persistence.Entity;
 
-public class SysEnegineer extends Employee {
+public class SysEngineer extends Employee {
 	private int workedHours = 6;
 	private int moneyForPromotion = 150;
 
-	public SysEnegineer() {
+	public SysEngineer() {
 
 	}
 
-	public SysEnegineer(String name, String lastName, int id) {
-		super(name, lastName, id);
+	public SysEngineer(String name, String lastName, int id) {
+		super(name, lastName, id, new TimeBank(id));
 
 	}
 	

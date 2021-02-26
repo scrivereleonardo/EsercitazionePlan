@@ -11,7 +11,7 @@ public class FullStackDev extends Employee {
 	}
 
 	public FullStackDev(String name, String lastName, int id) {
-		super(name, lastName, id);
+		super(name, lastName, id, new TimeBank(id));
 
 	}
 

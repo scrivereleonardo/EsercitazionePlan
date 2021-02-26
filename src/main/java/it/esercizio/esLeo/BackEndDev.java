@@ -2,7 +2,7 @@ package it.esercizio.esLeo;
 
 import javax.persistence.Entity;
 
-@Entity
+
 public class BackEndDev extends Employee{
 	private int workedHours=7;
 	private int moneyForPromotion=150;
@@ -12,7 +12,7 @@ public class BackEndDev extends Employee{
 	}
 	
 	public BackEndDev(String name, String lastName, int id) {
-		super(name, lastName, id);
+		super(name, lastName, id, new TimeBank(id));
 
 	}
 	

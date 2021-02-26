@@ -12,6 +12,15 @@ public class TimeBank {
 	private int promotions = 0;
 	private int overTimeHours = 0;
 	
+	public TimeBank(int baseSalary, int promotions, int overTimeHours) {
+		super();
+		this.baseSalary = baseSalary;
+		this.promotions = promotions;
+		this.overTimeHours = overTimeHours;
+	}
+
+	
+	
 	
 
 	

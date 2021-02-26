@@ -11,7 +11,7 @@ public class FrontEndDev extends Employee {
 	}
 
 	public FrontEndDev(String name, String lastName, int id) {
-		super(name, lastName, id);
+		super(name, lastName, id, new TimeBank(id));
 
 	}
 	

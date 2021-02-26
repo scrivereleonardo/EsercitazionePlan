@@ -12,7 +12,7 @@ public class Devops extends Employee {
 	}
 
 	public Devops(String name, String lastName, int id) {
-		super(name, lastName, id);
+		super(name, lastName, id, new TimeBank(id));
 
 	}
 

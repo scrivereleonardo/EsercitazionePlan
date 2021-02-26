@@ -1,6 +1,7 @@
 package it.esercizio.esLeo;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
@@ -11,19 +12,19 @@ public abstract class Employee {
 	private String lastName;
 	
 	
-	@Id
+
 	private int id;
 	
 	
 	private TimeBank tBank;
 
 	
-	public Employee(String name, String lastName, int id) {
+	public Employee(String name, String lastName, int id, TimeBank tBank) {
 		super();
 		this.name = name;
 		this.lastName = lastName;
 		this.id = id;
-		this.tBank = new TimeBank(this.id);
+		this.tBank = tBank;
 	}
 
 	public Employee() {
