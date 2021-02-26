@@ -9,6 +9,8 @@ import it.esercizio.esLeo.Employee;
 
 
 public class Company {
+	
+	///forse Da Eliminare?
 	List<Employee> employees;
 	Map<Employee, TimeBank> empTotalSalary;
 
@@ -20,7 +22,7 @@ public class Company {
 
 	public void addEmployee(Employee employee) {
 		this.employees.add(employee);
-		this.empTotalSalary.put(employee, new TimeBank());
+		
 	}
 
 	public List<Employee> getEmployees() {

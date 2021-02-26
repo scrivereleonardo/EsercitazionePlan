@@ -1,6 +1,10 @@
 package it.esercizio.esLeo;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+
+import org.springframework.beans.factory.annotation.Autowired;
 
 public abstract class Employee {
 	private String name;
@@ -13,12 +17,13 @@ public abstract class Employee {
 	
 	private TimeBank tBank;
 
-	public Employee(String name, String lastName, int id, TimeBank tBank) {
+	
+	public Employee(String name, String lastName, int id) {
 		super();
 		this.name = name;
 		this.lastName = lastName;
 		this.id = id;
-		this.tBank = tBank;
+		this.tBank = new TimeBank(this.id);
 	}
 
 	public Employee() {

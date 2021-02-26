@@ -4,20 +4,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 
+
+
+
 public class TimeBank {
 	private int baseSalary = 1000;
 	private int promotions = 0;
 	private int overTimeHours = 0;
 	
 	
-	private Map<Employee, Integer> bank;
+
 	
-	public TimeBank() {
 
-	}
 
-	public TimeBank(int baseSalary, int promotions, int overTimeHours) {
-		this.bank = new HashMap<Employee, Integer>();
+	public TimeBank(int id) {
+		
 	}
 
 
@@ -46,6 +47,7 @@ public class TimeBank {
 		this.overTimeHours = overTimeHours;
 	}
 
+	
 	public void promote() {
 		this.promotions += 1;
 	}
@@ -53,5 +55,11 @@ public class TimeBank {
 	public void addOvertimeHours (int hours) {
 		this.overTimeHours += hours;
 	}
+	
+	public void addToSalary(Employee employee, Integer salary) {
+		
+		
+	}
+	
 
 }

@@ -14,25 +14,28 @@ public class EsLeoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EsLeoApplication.class, args);
 	
-		TimeBank timeBank = new TimeBank();
+		
 		List<Employee> employees = new ArrayList<Employee>();
 		
-		employees.add(new Devops("Gabriele", "Puliti", 1 , timeBank));
-		employees.add(new Devops ("Stefano", "Verdi", 2, timeBank));
-		employees.add(new Devops ("Giulia", "Rossi", 3, timeBank));
+		employees.add(new BackEndDev("Gabriele", "Puliti", 1 ));
+		employees.add(new Devops ("Stefano", "Verdi", 2));
+		employees.add(new Devops ("Giulia", "Rossi", 3));
 	
-		
-		
+		employees.get(1).gettBank().addOvertimeHours(120);
+		employees.get(2).gettBank().promote();
+		employees.get(0).gettBank().promote();
 		
 		for (Employee employee : employees) {
-			printAll(employee, timeBank);
+			System.out.println(employee.totalSalary());
+			printAll(employee, employee.gettBank());
+			
 		}
 		
 	}
 
 	private static void printAll(Employee employee, TimeBank timeBank) {
 		System.out.println("Dipendente: " + employee.getName() + employee.getLastName());
-		System.out.println("Ore lavorate: " + employee.totalSalary());
+		
 		
 	}
 
